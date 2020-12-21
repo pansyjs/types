@@ -11,7 +11,7 @@
     "build1": "wb --tsconfig ./tsconfig.build.json"
   },
   "devDependencies": {
-    "@walrus/build": "^0.4.1",
-    "typescript": "^4.1.3"
+    "@walrus/build": "0.4.1",
+    "typescript": "4.1.3"
   }
 }
