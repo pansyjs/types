@@ -1,0 +1,17 @@
+{
+  "name": "@pansy/types",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:pansyjs/types.git",
+  "author": "wangxingkang <wang_xingkang@qq.com>",
+  "license": "MIT",
+  "scripts": {
+    "tsc": "tsc -p . --noEmit",
+    "tsc:watch": "tsc -p . --noEmit -w",
+    "build1": "wb --tsconfig ./tsconfig.build.json"
+  },
+  "devDependencies": {
+    "@walrus/build": "^0.4.1",
+    "typescript": "^4.1.3"
+  }
+}
