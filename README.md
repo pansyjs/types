@@ -30,27 +30,27 @@ type FooWithoutRainbow = NonUndefined<string | null | undefined>;
 ## 目录
 
 - 内置类型 
-  - [`Partial<T>`](#partialt) 将`T`中所有的属性设为可选
-  - [`Readonly<T>`](#readonlyt) 将`T`中所有的属性设为只读
-  - [`Pick<T,K>`](#picktk-1) 从`T`中过滤出属性`K`
-  - [`Record<T,K>`](#recordtk-1) 标记对象的 key value类型
-  - [`Exclude<T,U>`](#excludetu-1) 从`T`可分配给的类型中排除`U`
-  - [`Extract<T,U>`](#extracttu-1) 从`T`可分配给的类型中提取`U`
-  - [`NonNullable<T>`](#nonnullablet) 从`T`中排除`null`和`undefined`
-  - [`ReturnType`](#returntypet) 获取函数类型`T`的返回类型
-  - [`InstanceType`](#instancetypet) 获取构造函数类型`T`的实例类型
+  - [`Partial<T>`](#partialt) 将`T`中所有的属性设为可选 v2.1
+  - [`Readonly<T>`](#readonlyt) 将`T`中所有的属性设为只读 v2.1
+  - [`Pick<T,K>`](#picktk-1) 从`T`中过滤出属性`K` v2.1
+  - [`Record<T,K>`](#recordtk-1) 标记对象的 key value类型 v2.1
+  - [`Exclude<T,U>`](#excludetu-1) 从`T`可分配给的类型中排除`U` v2.8
+  - [`Extract<T,U>`](#extracttu-1) 从`T`可分配给的类型中提取`U` v2.8
+  - [`NonNullable<T>`](#nonnullablet) 从`T`中排除`null`和`undefined` v2.8
+  - [`ReturnType`](#returntypet) 获取函数类型`T`的返回类型 v2.8
+  - [`InstanceType`](#instancetypet) 获取构造函数类型`T`的实例类型 v2.8
   - [`Required<T>`](#requiredt) 将`T`中所有的属性设为必填
-  - [`Parameters<T>`](#parameterst) 获取一个函数的所有参数类型
-  - [`ConstructorParameters<T>`](#parameterst) 获取构造函数的所有参数类型
-  - [`Omit<T,K>`](#omittk-1) 通过从`T`选取所有属性然后删除`K`来构造类型
-  - [`Uppercase<S>`](#uppercases) 将字符串中的每个字符转换为大写 4.1
-  - [`Lowercase<S>`](#lowercases) 将字符串中的每个字符转换为小写 4.1
-  - [`Capitalize<S>`](#capitalizes) -将字符串中的第一个字符转换为大写 4.1
-  - [`Uncapitalize<S>`](#uncapitalizes) 将字符串中的第一个字符转换为小写 4.1
+  - [`Parameters<T>`](#parameterst) 获取一个函数的所有参数类型 v3.6
+  - [`ConstructorParameters<T>`](#parameterst) 获取构造函数的所有参数类型 v3.6
+  - [`Omit<T,K>`](#omittk-1) 通过从`T`选取所有属性然后删除`K`来构造类型 v3.5
+  - [`Uppercase<S>`](#uppercases) 将字符串中的每个字符转换为大写 v4.1
+  - [`Lowercase<S>`](#lowercases) 将字符串中的每个字符转换为小写 v4.1
+  - [`Capitalize<S>`](#capitalizes) -将字符串中的第一个字符转换为大写 v4.1
+  - [`Uncapitalize<S>`](#uncapitalizes) 将字符串中的第一个字符转换为小写 v4.1
 
 ### `Partial<T>`
 
-将`T`中所有的属性设为可选, 内置版本v2.1。
+将`T`中所有的属性设为可选。
 
 <details>
   <summary>
@@ -71,7 +71,7 @@ type FooWithoutRainbow = NonUndefined<string | null | undefined>;
 
 ### `Readonly<T>`
 
-将`T`中所有的属性设为只读, 内置版本v2.1。
+将`T`中所有的属性设为只读。
 
 <details>
   <summary>
@@ -91,7 +91,7 @@ type FooWithoutRainbow = NonUndefined<string | null | undefined>;
 [⇧ 回到目录](#目录)
 ### `Pick<T, K>`
 
-从 `T` 中过滤出属性 `K`, 内置版本v2.1。
+从 `T` 中过滤出属性 `K`。
 
 <details>
   <summary>
@@ -112,7 +112,7 @@ type FooWithoutRainbow = NonUndefined<string | null | undefined>;
 [⇧ 回到目录](#目录)
 ## `Record<T,K>`
 
-标记对象的 key value类型, 内置版本v2.1。
+标记对象的 key value类型。
 
 <details>
   <summary>
@@ -128,7 +128,7 @@ type FooWithoutRainbow = NonUndefined<string | null | undefined>;
 [⇧ 回到目录](#目录)
 ### `Exclude<T,U>`
 
-从`T`可分配给的类型中排除`U`, 内置版本v2.8。
+从`T`可分配给的类型中排除`U`。
 
 <details>
   <summary>
@@ -145,7 +145,7 @@ type FooWithoutRainbow = NonUndefined<string | null | undefined>;
 
 ### `Extract<T,U>`
 
-从`T`可分配给的类型中提取`U`, 内置版本v2.8。
+从`T`可分配给的类型中提取`U`。
 
 <details>
   <summary>
@@ -161,7 +161,7 @@ type FooWithoutRainbow = NonUndefined<string | null | undefined>;
 [⇧ 回到目录](#目录)
 ### `NonNullable<T>`
 
-从`T`中排除`null`和`undefined`, 内置版本v2.8。
+从`T`中排除`null`和`undefined`。
 
 <details>
   <summary>
@@ -178,7 +178,7 @@ type FooWithoutRainbow = NonUndefined<string | null | undefined>;
 
 ### `ReturnType<T>`
 
-获取函数类型`T`的返回类型, 内置版本v2.8。
+获取函数类型`T`的返回类型。
 
 <details>
   <summary>
@@ -195,7 +195,7 @@ type FooWithoutRainbow = NonUndefined<string | null | undefined>;
 
 ### `InstanceType<T>`
 
-获取构造函数类型`T`的实例类型, 内置版本v2.8。
+获取构造函数类型`T`的实例类型。
 
 <details>
   <summary>
@@ -217,7 +217,7 @@ type FooWithoutRainbow = NonUndefined<string | null | undefined>;
 
 ### `Required<T>` 
 
-将`T`中所有的属性设为必填, 内置版本v2.8。
+将`T`中所有的属性设为必填。
 
 <details>
   <summary>
@@ -238,7 +238,7 @@ type FooWithoutRainbow = NonUndefined<string | null | undefined>;
 
 ### `Parameters<T>`
 
-获取一个函数的所有参数类型, 内置版本v3.6。
+获取一个函数的所有参数类型。
 
 <details>
   <summary>
@@ -278,7 +278,7 @@ type FooWithoutRainbow = NonUndefined<string | null | undefined>;
 
 ### `Omit<T,K>`
 
-通过从`T`选取所有属性然后删除`K`来构造类型, 内置版本v3.5。
+通过从`T`选取所有属性然后删除`K`来构造类型。
 
 <details>
   <summary>

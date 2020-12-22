@@ -26,7 +26,7 @@ export type SetDifference<A, B> = A extends B ? never : A;
 
 /**
  * NonUndefined
- * @desc 过滤掉联合类型中的`undefined`
+ * @desc 从`T`中排除`undefined`
  * @example 
  *   // Expect: "string | null"
  *   NonUndefined<string | null | undefined>;
@@ -35,7 +35,7 @@ export type NonUndefined<T> = T extends undefined ? never : T;
 
 /**
  * NonNullable
- * @desc 过滤掉联合类型中的`undefined`和`null`，已内置(v2.8)
+ * @desc 从`T`中排除`null`和`undefined`，已内置(v2.8)
  * @example 
  *   // Expect: "string | null"
  *   NonUndefined<string | null | undefined>;
