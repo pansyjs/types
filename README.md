@@ -32,14 +32,17 @@ type FooWithoutRainbow = NonUndefined<string | null | undefined>;
 - 内置类型 
   - [`Partial<T>`](#partialt) 将`T`中所有的属性设为可选
   - [`Readonly<T>`](#readonlyt) 将`T`中所有的属性设为只读
-  - [`Pick<T,K>`](#Pick<T,K>) 从`T`中过滤出属性`K`
-  - [`Record<T,K>`](#Record<T,K>)
-  - [`Exclude<T,U>`](#Exclude<T,U>)
-  - [`Extract<T,U>`](#Extract<T,U>)
-  - [`NonNullable<T>`](#NonNullable<T>)
-  - [`ReturnType`](#ReturnType<T>)
-  - [`InstanceType`](#InstanceType<T>)
+  - [`Pick<T,K>`](#picktk-1) 从`T`中过滤出属性`K`
+  - [`Record<T,K>`](#recordtk-1) 标记对象的 key value类型
+  - [`Exclude<T,U>`](#excludetu-1) 从`T`可分配给的类型中排除`U`
+  - [`Extract<T,U>`](#extracttu-1) 从`T`可分配给的类型中提取`U`
+  - [`NonNullable<T>`](#nonnullablet) 从`T`中排除`null`和`undefined`
+  - [`ReturnType`](#returntypet) 获取函数类型`T`的返回类型
+  - [`InstanceType`](#instancetypet) 获取构造函数类型`T`的实例类型
   - [`Required<T>`](#requiredt) 将`T`中所有的属性设为必填
+  - [`Parameters<T>`](#parameterst) 获取一个函数的所有参数类型
+  - [`ConstructorParameters<T>`](#parameterst) 获取构造函数的所有参数类型
+  - [`Omit<T,K>`](#omittk-1) 
 
 ### `Partial<T>`
 
@@ -60,6 +63,8 @@ type FooWithoutRainbow = NonUndefined<string | null | undefined>;
   ```
 </details>
 
+[⇧ 回到目录](#目录)
+
 ### `Readonly<T>`
 
 将`T`中所有的属性设为只读, 内置版本v2.1。
@@ -79,6 +84,7 @@ type FooWithoutRainbow = NonUndefined<string | null | undefined>;
   ```
 </details>
 
+[⇧ 回到目录](#目录)
 ### `Pick<T, K>`
 
 从 `T` 中过滤出属性 `K`, 内置版本v2.1。
@@ -99,6 +105,7 @@ type FooWithoutRainbow = NonUndefined<string | null | undefined>;
   ```
 </details>
 
+[⇧ 回到目录](#目录)
 ## `Record<T,K>`
 
 标记对象的 key value类型, 内置版本v2.1。
@@ -114,6 +121,7 @@ type FooWithoutRainbow = NonUndefined<string | null | undefined>;
   ```
 </details>
 
+[⇧ 回到目录](#目录)
 ### `Exclude<T,U>`
 
 从`T`可分配给的类型中排除`U`, 内置版本v2.8。
@@ -129,7 +137,9 @@ type FooWithoutRainbow = NonUndefined<string | null | undefined>;
   ```
 </details>
 
-### `Exclude<T,U>`
+[⇧ 回到目录](#目录)
+
+### `Extract<T,U>`
 
 从`T`可分配给的类型中提取`U`, 内置版本v2.8。
 
@@ -140,10 +150,11 @@ type FooWithoutRainbow = NonUndefined<string | null | undefined>;
 
   ```ts
   // Expect: 'a' | 'c'
-  Exclude<"a" | "b" | "c" | "d", "a" | "c" | "f">;
+  Extract<"a" | "b" | "c" | "d", "a" | "c" | "f">;
   ```
 </details>
 
+[⇧ 回到目录](#目录)
 ### `NonNullable<T>`
 
 从`T`中排除`null`和`undefined`, 内置版本v2.8。
@@ -159,6 +170,8 @@ type FooWithoutRainbow = NonUndefined<string | null | undefined>;
   ```
 </details>
 
+[⇧ 回到目录](#目录)
+
 ### `ReturnType<T>`
 
 获取函数类型`T`的返回类型, 内置版本v2.8。
@@ -173,6 +186,8 @@ type FooWithoutRainbow = NonUndefined<string | null | undefined>;
   ReturnType<() => string>;
   ```
 </details>
+
+[⇧ 回到目录](#目录)
 
 ### `InstanceType<T>`
 
@@ -194,6 +209,8 @@ type FooWithoutRainbow = NonUndefined<string | null | undefined>;
   ```
 </details>
 
+[⇧ 回到目录](#目录)
+
 ### `Required<T>` 
 
 将`T`中所有的属性设为必填, 内置版本v2.8。
@@ -210,6 +227,70 @@ type FooWithoutRainbow = NonUndefined<string | null | undefined>;
   }
   // Expect: { appName: string; port: number; }
   Required<NodeConfig>;
+  ```
+</details>
+
+[⇧ 回到目录](#目录)
+
+### `Parameters<T>`
+
+获取一个函数的所有参数类型, 内置版本v3.6。
+
+<details>
+  <summary>
+    示例
+  </summary>
+
+  ```ts
+  function shuffle(input: string, input1: number): void {}
+
+  // Expect: { input: string; input1: number; }
+  Parameters<typeof shuffle>;
+  ```
+</details>
+
+[⇧ 回到目录](#目录)
+
+### `ConstructorParameters<T>`
+
+获取构造函数的所有参数类型, 内置版本v3.6。
+
+<details>
+  <summary>
+    示例
+  </summary>
+
+  ```ts  
+  class A {
+    constructor(input: string, input1: number) {}
+  }
+
+  // Expect: { input: string; input1: number; }
+  ConstructorParameters<typeof A>;
+  ```
+</details>
+
+[⇧ 回到目录](#目录)
+
+### `Omit<T,K>`
+
+移除 T 中的 U 属性, 内置版本v3.6。
+
+<details>
+  <summary>
+    示例
+  </summary>
+
+  ```ts  
+  interface Animal {
+ 		imageUrl: string;
+ 		species: string;
+ 		images: string[];
+ 		paragraphs: string[];
+  }
+
+  // Expect: { images: string[]; paragraphs: string[]; }
+  Omit<Animal, 'imageUrl' | 'species'>;
   ```
 </details>
 
