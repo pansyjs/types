@@ -42,7 +42,11 @@ type FooWithoutRainbow = NonUndefined<string | null | undefined>;
   - [`Required<T>`](#requiredt) 将`T`中所有的属性设为必填
   - [`Parameters<T>`](#parameterst) 获取一个函数的所有参数类型
   - [`ConstructorParameters<T>`](#parameterst) 获取构造函数的所有参数类型
-  - [`Omit<T,K>`](#omittk-1) 
+  - [`Omit<T,K>`](#omittk-1) 通过从`T`选取所有属性然后删除`K`来构造类型
+  - [`Uppercase<S>`](#uppercases) 将字符串中的每个字符转换为大写 4.1
+  - [`Lowercase<S>`](#lowercases) 将字符串中的每个字符转换为小写 4.1
+  - [`Capitalize<S>`](#capitalizes) -将字符串中的第一个字符转换为大写 4.1
+  - [`Uncapitalize<S>`](#uncapitalizes) 将字符串中的第一个字符转换为小写 4.1
 
 ### `Partial<T>`
 
@@ -253,7 +257,7 @@ type FooWithoutRainbow = NonUndefined<string | null | undefined>;
 
 ### `ConstructorParameters<T>`
 
-获取构造函数的所有参数类型, 内置版本v3.6。
+获取构造函数的所有参数类型
 
 <details>
   <summary>
@@ -274,7 +278,7 @@ type FooWithoutRainbow = NonUndefined<string | null | undefined>;
 
 ### `Omit<T,K>`
 
-移除 T 中的 U 属性, 内置版本v3.6。
+通过从`T`选取所有属性然后删除`K`来构造类型, 内置版本v3.5。
 
 <details>
   <summary>
@@ -291,6 +295,74 @@ type FooWithoutRainbow = NonUndefined<string | null | undefined>;
 
   // Expect: { images: string[]; paragraphs: string[]; }
   Omit<Animal, 'imageUrl' | 'species'>;
+  ```
+</details>
+
+[⇧ 回到目录](#目录)
+
+### `Uppercase<S>`
+
+将字符串中的每个字符转换为大写
+
+<details>
+  <summary>
+    示例
+  </summary>
+
+  ```ts  
+  // Expect: 'HELLO'
+  Uppercase<'hello'>;
+  ```
+</details>
+
+[⇧ 回到目录](#目录)
+
+### `Lowercase<S>`
+
+将字符串中的每个字符转换为小写
+
+<details>
+  <summary>
+    示例
+  </summary>
+
+  ```ts  
+  // Expect: 'hello'
+  Uppercase<'HELLO'>;
+  ```
+</details>
+
+[⇧ 回到目录](#目录)
+
+### `Capitalize<S>`
+
+将字符串中的第一个字符转换为大写
+
+<details>
+  <summary>
+    示例
+  </summary>
+
+  ```ts  
+  // Expect: 'Hello'
+  Capitalize<'hello'>;
+  ```
+</details>
+
+[⇧ 回到目录](#目录)
+
+### `Uncapitalize<S>`
+
+将字符串中的第一个字符转换为小写
+
+<details>
+  <summary>
+    示例
+  </summary>
+
+  ```ts  
+  // Expect: 'hello'
+  Uncapitalize<'Hello'>;
   ```
 </details>
 
