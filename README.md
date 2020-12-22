@@ -30,8 +30,8 @@ type FooWithoutRainbow = NonUndefined<string | null | undefined>;
 ## 目录
 
 - 内置类型 
-  - [`Partial<T>`](#Partial<T>) 将`T`中所有的属性设为可选
-  - [`Readonly<T>`](#Readonly<T>) 将`T`中所有的属性设为只读
+  - [`Partial<T>`](#partialt) 将`T`中所有的属性设为可选
+  - [`Readonly<T>`](#readonlyt) 将`T`中所有的属性设为只读
   - [`Pick<T,K>`](#Pick<T,K>) 从`T`中过滤出属性`K`
   - [`Record<T,K>`](#Record<T,K>)
   - [`Exclude<T,U>`](#Exclude<T,U>)
@@ -39,7 +39,7 @@ type FooWithoutRainbow = NonUndefined<string | null | undefined>;
   - [`NonNullable<T>`](#NonNullable<T>)
   - [`ReturnType`](#ReturnType<T>)
   - [`InstanceType`](#InstanceType<T>)
-  - [`Required<T>`](#Required<T>) 将`T`中所有的属性设为必填
+  - [`Required<T>`](#requiredt) 将`T`中所有的属性设为必填
 
 ### Partial<T> 
 
@@ -212,3 +212,5 @@ type FooWithoutRainbow = NonUndefined<string | null | undefined>;
   Required<NodeConfig>;
   ```
 </details>
+
+[⇧ 回到目录](#目录)
