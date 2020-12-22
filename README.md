@@ -41,7 +41,7 @@ type FooWithoutRainbow = NonUndefined<string | null | undefined>;
   - [`InstanceType`](#InstanceType<T>)
   - [`Required<T>`](#requiredt) 将`T`中所有的属性设为必填
 
-### Partial<T> 
+### `Partial<T>`
 
 将`T`中所有的属性设为可选, 内置版本v2.1。
 
@@ -60,7 +60,7 @@ type FooWithoutRainbow = NonUndefined<string | null | undefined>;
   ```
 </details>
 
-### Readonly<T> 
+### `Readonly<T>`
 
 将`T`中所有的属性设为只读, 内置版本v2.1。
 
@@ -79,7 +79,7 @@ type FooWithoutRainbow = NonUndefined<string | null | undefined>;
   ```
 </details>
 
-### Pick<T, K>
+### `Pick<T, K>`
 
 从 `T` 中过滤出属性 `K`, 内置版本v2.1。
 
@@ -99,7 +99,7 @@ type FooWithoutRainbow = NonUndefined<string | null | undefined>;
   ```
 </details>
 
-## Record<T,K>
+## `Record<T,K>`
 
 标记对象的 key value类型, 内置版本v2.1。
 
@@ -114,7 +114,7 @@ type FooWithoutRainbow = NonUndefined<string | null | undefined>;
   ```
 </details>
 
-### Exclude<T,U>
+### `Exclude<T,U>`
 
 从`T`可分配给的类型中排除`U`, 内置版本v2.8。
 
@@ -129,7 +129,7 @@ type FooWithoutRainbow = NonUndefined<string | null | undefined>;
   ```
 </details>
 
-### Exclude<T,U>
+### `Exclude<T,U>`
 
 从`T`可分配给的类型中提取`U`, 内置版本v2.8。
 
@@ -144,7 +144,7 @@ type FooWithoutRainbow = NonUndefined<string | null | undefined>;
   ```
 </details>
 
-### NonNullable<T>
+### `NonNullable<T>`
 
 从`T`中排除`null`和`undefined`, 内置版本v2.8。
 
@@ -159,7 +159,7 @@ type FooWithoutRainbow = NonUndefined<string | null | undefined>;
   ```
 </details>
 
-### ReturnType<T>
+### `ReturnType<T>`
 
 获取函数类型`T`的返回类型, 内置版本v2.8。
 
@@ -174,7 +174,7 @@ type FooWithoutRainbow = NonUndefined<string | null | undefined>;
   ```
 </details>
 
-### InstanceType<T>
+### `InstanceType<T>`
 
 获取构造函数类型`T`的实例类型, 内置版本v2.8。
 
@@ -194,7 +194,7 @@ type FooWithoutRainbow = NonUndefined<string | null | undefined>;
   ```
 </details>
 
-### Required<T> 
+### `Required<T>` 
 
 将`T`中所有的属性设为必填, 内置版本v2.8。
 
