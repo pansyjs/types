@@ -5,6 +5,9 @@ export {
   $ElementType,
   $Shape,
   $NonMaybeType,
+  Primitive,
+  Nullish,
+  Falsy
 } from './basic';
 export { 
   SetIntersection,

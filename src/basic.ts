@@ -88,7 +88,8 @@ export type $Shape<T extends object> = Partial<T>;
 export type $NonMaybeType<T> = NonNullable<T>;
 
 /**
- * 原始数据类型
+ * Primitive
+ * @desc 原始数据类型
  */
 export type Primitive =
 	| null
@@ -98,3 +99,25 @@ export type Primitive =
 	| boolean
 	| symbol
 	| bigint;
+
+/**
+ * Falsy
+ * @desc 在TypeScript中代表假值: `false | "" | 0 | null | undefined`
+ * @example
+ *   type Various = 'a' | 'b' | undefined | false;
+ *
+ *   // Expect: "a" | "b"
+ *   Exclude<Various, Falsy>;
+ */
+export type Falsy = false | '' | 0 | null | undefined;
+
+/**
+ * Nullish
+ * @desc 在TypeScript中代表空值, [https://www.typescriptlang.org/docs/handbook/release-notes/typescript-3-7.html#nullish-coalescing]
+ * @example
+ *   type Various = 'a' | 'b' | undefined;
+ *   
+ *   // Expect: "a" | "b"
+ *   Exclude<Various, Nullish>;
+ */
+export type Nullish = null | undefined;
