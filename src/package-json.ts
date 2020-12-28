@@ -140,9 +140,11 @@ namespace PackageJson {
     contributors?: Person[];
     /** 维护软件包的人员列表 */
     maintainers?: Person[];
-    /** 包包含的文件 */
+    /** 程序包包含的文件 */
     files?: string[];
     type?: 'module' | 'commonjs';
+    /** 模块主要入口 */
+    main?: string;
     /** 应该安装在`PATH`中的可执行文件 */
     bin?:
       | string
